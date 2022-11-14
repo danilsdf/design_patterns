@@ -10,9 +10,8 @@ namespace BuilderPattern
             var cheap = new CheapLaptop();
             var office = new OfficeLaptop();
 
-            var director = new Director();
+            var director = new Director(gaming);
 
-            director.SetLaptopBuilder(gaming);
             director.ConstructLaptop();
 
             var laptop = director.GetLaptop();

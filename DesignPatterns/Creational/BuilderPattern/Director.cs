@@ -4,15 +4,18 @@ namespace BuilderPattern
 {
     internal class Director
     {
-        private LaptopBuilder _laptopBuilder;
-        public void SetLaptopBuilder(LaptopBuilder lBuilder)
+        private readonly LaptopBuilder _laptopBuilder;
+
+        public Director(LaptopBuilder laptopBuilder)
         {
-            _laptopBuilder = lBuilder;
+            _laptopBuilder = laptopBuilder;
         }
+
         public Laptop GetLaptop()
         {
             return _laptopBuilder.GetMyLaptop();
         }
+
         public void ConstructLaptop()
         {
             _laptopBuilder.CreateNewLaptop();
