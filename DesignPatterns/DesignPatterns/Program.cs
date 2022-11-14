@@ -1,4 +1,5 @@
 ﻿using AbstractFactoryPattern;
+using BuilderPattern;
 
 namespace DesignPatterns
 {
@@ -6,14 +7,22 @@ namespace DesignPatterns
     {
         static void Main()
         {
-            RunAbstractFactory();
+            //RunAbstractFactory();
+            RunBuilder();
         }
 
         static void RunAbstractFactory()
         {
-            var t = new AbstractFactoryMain();
+            var abstractFactory = new AbstractFactoryMain();
 
-            t.Run();
+            abstractFactory.Run();
+        }
+
+        static void RunBuilder()
+        {
+            var builder = new BuilderMain();
+
+            builder.Run();
         }
     }
 }
